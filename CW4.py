@@ -34,9 +34,51 @@ class Teacher(Person):
     def info_teacher(self):
         print(f'teacher:\t{self.subject} | {self.hours}')
 
-    def info_all(self):
+    def info_teacherall(self):
         self.info_person()
         self.info_teacher()
 
+
 teacher = Teacher(subject='Pycharm', hours=24, name='unknown_name', surname='unknown_surname', age=30)
-teacher.info_all()
+teacher.info_teacherall()
+
+
+class Student(Person):
+    progress: str
+    group: str
+
+    def __init__(self, progress: str, group: str, name: str, surname: str, age: int):
+        self.progress = progress
+        self.group = group
+        Person.__init__(self, name=name, surname=surname, age=age)
+
+    def info_student(self):
+        print(f'student:\t{self.progress} | {self.group}')
+
+    def info_studentall(self):
+        self.info_person()
+        self.info_student()
+
+
+cake = Student(progress='Pycharm', group="C2126", name='Polly', surname='Cake', age=140)
+cake.info_studentall()
+
+
+class Work(Person):
+    position: str
+    duties: str
+
+    def __init__(self, position: str, duties: str, name: str, surname: str, age: int):
+        self.position = position
+        self.duties = duties
+        Person.__init__(self, name=name, surname=surname, age=age)
+
+    def info_work(self):
+        print(f'work:\t{self.position} | {self.duties}')
+
+    def info_workall(self):
+        self.info_person()
+        self.info_work()
+
+work = Work(position='unknown_position', duties="unknown_duties", name='unknown_name', surname='unknown_surname', age=140)
+work.info_workall()
