@@ -1,0 +1,5 @@
+LOG DATA: 2024-05-11 11:24:09,309 | ERROR | can only concatenate str (not "int") to str
+Traceback (most recent call last):
+  File "C:\Users\Света\PycharmProjects\ItStepCW\CW8.py", line 21, in <module>
+    result = a + b
+TypeError: can only concatenate str (not "int") to str
