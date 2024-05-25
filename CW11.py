@@ -1,6 +1,6 @@
 import cv2
 
-image_path = 'img/cats.jpg'
+image_path = 'Cats.jpg'
 image_cat = cv2.imread(image_path)
 
 # cv2.imshow('Cats', image_cat)
